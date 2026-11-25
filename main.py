@@ -15,6 +15,7 @@ def main():
     lines = AUTO_REPLY.splitlines()
     assert len(lines) == 1, "auto-reply must be a single line"
     assert AUTO_REPLY.strip(), "auto-reply must not be empty"
+    assert AUTO_REPLY == AUTO_REPLY.strip(), "auto-reply must have no surrounding whitespace"
     print(AUTO_REPLY)
 
 
